@@ -1,19 +1,24 @@
 package lv1;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
 
 public class ReportResult {
-
     public static void main(String[] args) {
 
-        String[] id_list = { "muzi", "frodo", "apeach", "neo" };
-        String[] report = { "muzi frodo", "apeach frodo", "frodo neo", "muzi neo", "apeach muzi" };
-        int k = 2;
-        // String[] id_list = { "con", "ryan" };
-        // String[] report = { "ryan con", "ryan con", "ryan con", "ryan con" };
-        // int k = 3;
+        String[][] id_list = { { "muzi", "frodo", "apeach", "neo" }, { "con", "ryan" } };
+        String[][] report = { { "muzi frodo", "apeach frodo", "frodo neo", "muzi neo", "apeach muzi" },
+                { "ryan con", "ryan con", "ryan con", "ryan con" } };
+        int k[] = { 2, 3 };
 
-        solution(id_list, report, k);
+        for (int i = 0; i < id_list.length; i++) {
+            for (int j : solution(id_list[i], report[i], k[i])) {
+                System.out.print(j + " ");
+            }
+            System.out.println();
+        }
     }
 
     public static int[] solution(String[] id_list, String[] report, int k) {
@@ -28,9 +33,9 @@ public class ReportResult {
 
         for (String s : id_list) {
             if (map.get(s) != null && map.get(s).size() >= k) {
-                Iterator it = map.get(s).iterator();
+                Iterator<String> it = map.get(s).iterator();
                 while (it.hasNext()) {
-                    answer[Arrays.asList(id_list).indexOf(Arrays.asList(it.next()).get(0))]++;
+                    answer[Arrays.asList(id_list).indexOf(it.next())]++;
                 }
             }
         }
