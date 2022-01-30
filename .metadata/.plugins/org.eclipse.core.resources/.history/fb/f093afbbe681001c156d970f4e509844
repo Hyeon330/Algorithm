@@ -1,6 +1,6 @@
-package silver.five;
+package silver.two;
 
-public class Exam1978 {
+public class Exam1929 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
