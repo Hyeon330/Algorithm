@@ -30,6 +30,35 @@ public class Exam1929 {
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(bf.readLine());
 
+		// ------------------------------------------------------------------------
+		// 272ms
+
+		// int m = Integer.parseInt(st.nextToken());
+		// int n = Integer.parseInt(st.nextToken());
+		// boolean[] p = new boolean[n + 1];
+		// StringBuilder sb = new StringBuilder();
+
+		// p[0] = true;
+		// p[1] = true;
+
+		// for (int i = 2; i <= Math.sqrt(n); i++) {
+		// if (!p[i]) {
+		// for (int j = i * 2; j <= n; j += i) {
+		// p[j] = true;
+		// }
+		// }
+		// }
+
+		// for (int i = m; i <= n; i++) {
+		// if (!p[i])
+		// sb.append(i).append('\n');
+		// }
+
+		// System.out.println(sb);
+
+		// -----------------------------------------------------------------------------
+		// 256ms
+
 		int m = Integer.parseInt(st.nextToken()) - 1;
 		boolean[] n = new boolean[Integer.parseInt(st.nextToken())];
 		StringBuilder sb = new StringBuilder();
@@ -48,7 +77,6 @@ public class Exam1929 {
 			if (!n[i])
 				sb.append(i + 1).append('\n');
 		}
-
 		System.out.println(sb);
 
 		// ---------------------------------------------------------------------------
