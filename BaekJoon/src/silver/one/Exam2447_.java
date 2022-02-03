@@ -1,5 +1,6 @@
 package silver.one;
 
+import java.io.BufferedReader;
 /*
 문제 - 별 찍기 - 10
 
@@ -52,27 +53,22 @@ N이 3보다 클 경우, 크기 N의 패턴은 공백으로 채워진 가운데�
 *
 */
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Arrays;
 
 public class Exam2447_ {
 
-	
-	
 	public static void main(String[] args) throws IOException {
-//		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-		
-		f(27);
+		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+		int n = Integer.parseInt(bf.readLine());
+		char[][] star = new char[n][n];
+
+		Arrays.fill(star[0], '*');
+
+		System.out.println(Arrays.toString(star));
 	}
 
 	private static void f(int num) {
-		for (int i = 1; i <= num; i++) {
-			for (int j = 1; j <= num; j++) {
-				if(i%3==2&&j%3==2) {
-					System.out.print(" ");
-				}else {
-					System.out.print("*");
-				}
-			}
-			System.out.println();
-		}
+
 	}
 }

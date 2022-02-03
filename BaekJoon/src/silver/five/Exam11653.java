@@ -54,19 +54,18 @@ public class Exam11653 {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-		int num = Integer.parseInt(bf.readLine());
-		
-		f(num);
+		f(Integer.parseInt(bf.readLine()));
 	}
+
 	public static void f(int num) {
-		if(num==1) {
+		if (num == 1) {
 			return;
 		}
 		int i = 2;
-		while(true) {
-			if(num%i==0) {
+		while (true) {
+			if (num % i == 0) {
 				System.out.println(i);
-				f(num/i);
+				f(num / i);
 				return;
 			}
 			i++;
