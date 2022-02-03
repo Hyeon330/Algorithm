@@ -32,7 +32,7 @@ package silver.one;
 
 import java.io.*;
 
-public class Exam9092 {
+public class Exam9020 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -54,7 +54,7 @@ public class Exam9092 {
 				p1--;
 				p2++;
 			}
-			sb.append(p1+" "+p2+"\n");
+			sb.append(p1 + " " + p2 + "\n");
 		}
 		bw.write(sb.toString());
 		bw.flush();
