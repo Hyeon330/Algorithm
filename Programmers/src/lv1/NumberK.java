@@ -1,5 +1,7 @@
 package lv1;
 
+// 정렬 > k번쨰 수
+
 import java.util.Arrays;
 
 public class NumberK {

@@ -1,5 +1,7 @@
 package lv2;
 
+// 정렬 > 가장 큰 수
+
 public class biggestNum {
     public static void main(String[] args) {
         int[] nums = { 3, 30, 34, 5, 9 };

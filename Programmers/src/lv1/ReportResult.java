@@ -1,6 +1,6 @@
 package lv1;
 
-// 신고 결과 받기
+// 2022 KAKAO BLIND RECRUITMENT > 신고 결과 받기
 
 import java.util.Arrays;
 import java.util.HashMap;

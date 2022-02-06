@@ -1,6 +1,6 @@
 package lv1;
 
-// 로또의 최고 수누이와 최저 순위
+// Dev-Matching: 웹 백엔드 개발... > 로또의 최고 순위와 최저 순위
 
 public class LottoBestAndWorst {
 
