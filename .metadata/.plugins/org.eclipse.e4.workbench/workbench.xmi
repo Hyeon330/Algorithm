@@ -361,11 +361,11 @@
       <tags>categoryTag:Help</tags>
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_k7BoUHxcEeyydZ0u1Xoiiw" elementId="org.eclipse.ui.editorss" selectedElement="_k7BoUXxcEeyydZ0u1Xoiiw">
-      <children xsi:type="basic:PartStack" xmi:id="_k7BoUXxcEeyydZ0u1Xoiiw" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_C2S_cIRDEey4wbLimxOgwA">
+      <children xsi:type="basic:PartStack" xmi:id="_k7BoUXxcEeyydZ0u1Xoiiw" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_HWKnIIJNEeyMy79ocyH20A">
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
         <children xsi:type="basic:Part" xmi:id="_HWKnIIJNEeyMy79ocyH20A" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Exam4948.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Exam4948.java&quot; partName=&quot;Exam4948.java&quot; title=&quot;Exam4948.java&quot; tooltip=&quot;BaekJoon/src/silver/two/Exam4948.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/BaekJoon/src/silver/two/Exam4948.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;999&quot; selectionTopPixel=&quot;1060&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Exam4948.java&quot; partName=&quot;Exam4948.java&quot; title=&quot;Exam4948.java&quot; tooltip=&quot;BaekJoon/src/silver/two/Exam4948.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/BaekJoon/src/silver/two/Exam4948.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1283&quot; selectionTopPixel=&quot;1080&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
@@ -390,12 +390,6 @@
         </children>
         <children xsi:type="basic:Part" xmi:id="_7H8zsIRCEey4wbLimxOgwA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Exam2447_.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
           <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Exam2447_.java&quot; partName=&quot;Exam2447_.java&quot; title=&quot;Exam2447_.java&quot; tooltip=&quot;BaekJoon/src/silver/one/Exam2447_.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/BaekJoon/src/silver/one/Exam2447_.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1526&quot; selectionTopPixel=&quot;5&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>removeOnHide</tags>
-          <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_C2S_cIRDEey4wbLimxOgwA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Exam3009_.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Exam3009_.java&quot; partName=&quot;Exam3009_.java&quot; title=&quot;Exam3009_.java&quot; tooltip=&quot;BaekJoon/src/bronze/three/Exam3009_.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/BaekJoon/src/bronze/three/Exam3009_.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1117&quot; selectionTopPixel=&quot;485&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
@@ -625,7 +619,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_k41P8HxcEeyydZ0u1Xoiiw" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_m-GgoIQuEey4wbLimxOgwA" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_ksgENXxcEeyydZ0u1Xoiiw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_CiHLQIbMEeyoa9P_BoTCXA" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_ksgENXxcEeyydZ0u1Xoiiw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_k41P8XxcEeyydZ0u1Xoiiw" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -665,7 +659,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_k413AHxcEeyydZ0u1Xoiiw" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_m-Jj8IQuEey4wbLimxOgwA" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_ksfdTHxcEeyydZ0u1Xoiiw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_CiJAcIbMEeyoa9P_BoTCXA" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_ksfdTHxcEeyydZ0u1Xoiiw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_k413AXxcEeyydZ0u1Xoiiw" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -811,6 +805,18 @@
     <bindings xmi:id="_ks00VnxcEeyydZ0u1Xoiiw" keySequence="SHIFT+CR" command="_ksgEgXxcEeyydZ0u1Xoiiw"/>
     <bindings xmi:id="__96wQYElEeyUV_o3G8nkDg" keySequence="CTRL+F" command="__9n1V4ElEeyUV_o3G8nkDg"/>
     <bindings xmi:id="__99MgIElEeyUV_o3G8nkDg" keySequence="ESC" command="__9n1a4ElEeyUV_o3G8nkDg"/>
+    <bindings xmi:id="_CRq7gIbMEeyoa9P_BoTCXA" keySequence="CTRL+SHIFT+U" command="_CRbq9YbMEeyoa9P_BoTCXA"/>
+    <bindings xmi:id="_CRrikIbMEeyoa9P_BoTCXA" keySequence="CTRL+SHIFT+I" command="_CRcSDYbMEeyoa9P_BoTCXA"/>
+    <bindings xmi:id="_CRrikYbMEeyoa9P_BoTCXA" keySequence="CTRL+SHIFT+A" command="_CRbq9IbMEeyoa9P_BoTCXA"/>
+    <bindings xmi:id="_CRsJoIbMEeyoa9P_BoTCXA" keySequence="CTRL+SHIFT+D" command="_CRcSAYbMEeyoa9P_BoTCXA"/>
+    <bindings xmi:id="_CRswsIbMEeyoa9P_BoTCXA" keySequence="CTRL+U" command="_CRcSD4bMEeyoa9P_BoTCXA"/>
+    <bindings xmi:id="_CRswsYbMEeyoa9P_BoTCXA" keySequence="CTRL+M" command="_CRcSB4bMEeyoa9P_BoTCXA"/>
+    <bindings xmi:id="_CRswsobMEeyoa9P_BoTCXA" keySequence="CTRL+SHIFT+/" command="_CRcSBIbMEeyoa9P_BoTCXA"/>
+    <bindings xmi:id="_CRtXwIbMEeyoa9P_BoTCXA" keySequence="CTRL+D" command="_CRbq9obMEeyoa9P_BoTCXA"/>
+    <bindings xmi:id="_CRtXwYbMEeyoa9P_BoTCXA" keySequence="CTRL+E" command="_CRcSAIbMEeyoa9P_BoTCXA"/>
+    <bindings xmi:id="_CRtXwobMEeyoa9P_BoTCXA" keySequence="ALT+SHIFT+I" command="_CRcSCIbMEeyoa9P_BoTCXA"/>
+    <bindings xmi:id="_CRt-0IbMEeyoa9P_BoTCXA" keySequence="ALT+CTRL+[" command="_CRcSCYbMEeyoa9P_BoTCXA"/>
+    <bindings xmi:id="_CRt-0YbMEeyoa9P_BoTCXA" keySequence="ALT+CTRL+]" command="_CRcSC4bMEeyoa9P_BoTCXA"/>
   </bindingTables>
   <bindingTables xmi:id="_kstfgHxcEeyydZ0u1Xoiiw" elementId="org.eclipse.ui.contexts.window" bindingContext="_ksHpq3xcEeyydZ0u1Xoiiw">
     <bindings xmi:id="_kstfgXxcEeyydZ0u1Xoiiw" keySequence="ALT+CTRL+SHIFT+A" command="_ksfdJXxcEeyydZ0u1Xoiiw"/>
@@ -3268,6 +3274,29 @@
   <commands xmi:id="__9n1eIElEeyUV_o3G8nkDg" elementId="com.genuitec.eclipse.codetogether.singleActivation" commandName="Activate File on CodeTogether Host" category="__9mnM4ElEeyUV_o3G8nkDg"/>
   <commands xmi:id="__9n1eYElEeyUV_o3G8nkDg" elementId="com.genuitec.eclipse.codetogether.start" commandName="Start Hosting Session" description="Collaborate with CodeTogether" category="__9mnM4ElEeyUV_o3G8nkDg"/>
   <commands xmi:id="_ACOogIEmEeyUV_o3G8nkDg" elementId="com.genuitec.myeclipse.help.darktheme.commandid" commandName="com.genuitec.myeclipse.help.darktheme.commandid"/>
+  <commands xmi:id="_CRbq8IbMEeyoa9P_BoTCXA" elementId="io.emmet.eclipse.commands.increment_number_by_10" commandName="Increment number by 10" category="_CRbD4IbMEeyoa9P_BoTCXA"/>
+  <commands xmi:id="_CRbq8YbMEeyoa9P_BoTCXA" elementId="io.emmet.eclipse.commands.increment_number_by_01" commandName="Increment number by 0.1" category="_CRbD4IbMEeyoa9P_BoTCXA"/>
+  <commands xmi:id="_CRbq8obMEeyoa9P_BoTCXA" elementId="io.emmet.eclipse.commands.reflect_css_value" commandName="Reflect CSS Value" category="_CRbD4IbMEeyoa9P_BoTCXA"/>
+  <commands xmi:id="_CRbq84bMEeyoa9P_BoTCXA" elementId="io.emmet.eclipse.commands.decrement_number_by_1" commandName="Decrement number by 1" category="_CRbD4IbMEeyoa9P_BoTCXA"/>
+  <commands xmi:id="_CRbq9IbMEeyoa9P_BoTCXA" elementId="io.emmet.eclipse.commands.wrap_with_abbreviation" commandName="Wrap With Abbreviation..." category="_CRbD4IbMEeyoa9P_BoTCXA"/>
+  <commands xmi:id="_CRbq9YbMEeyoa9P_BoTCXA" elementId="io.emmet.eclipse.commands.update_image_size" commandName="Update Image Size" category="_CRbD4IbMEeyoa9P_BoTCXA"/>
+  <commands xmi:id="_CRbq9obMEeyoa9P_BoTCXA" elementId="io.emmet.eclipse.commands.match_pair_outward" commandName="Match Pair Outward" category="_CRbD4IbMEeyoa9P_BoTCXA"/>
+  <commands xmi:id="_CRcSAIbMEeyoa9P_BoTCXA" elementId="io.emmet.eclipse.commands.expand_abbreviation" commandName="Expand Abbreviation" category="_CRbD4IbMEeyoa9P_BoTCXA"/>
+  <commands xmi:id="_CRcSAYbMEeyoa9P_BoTCXA" elementId="io.emmet.eclipse.commands.match_pair_inward" commandName="Match Pair Inward" category="_CRbD4IbMEeyoa9P_BoTCXA"/>
+  <commands xmi:id="_CRcSAobMEeyoa9P_BoTCXA" elementId="io.emmet.eclipse.commands.decrement_number_by_10" commandName="Decrement number by 10" category="_CRbD4IbMEeyoa9P_BoTCXA"/>
+  <commands xmi:id="_CRcSA4bMEeyoa9P_BoTCXA" elementId="io.emmet.eclipse.commands.decrement_number_by_01" commandName="Decrement number by 0.1" category="_CRbD4IbMEeyoa9P_BoTCXA"/>
+  <commands xmi:id="_CRcSBIbMEeyoa9P_BoTCXA" elementId="io.emmet.eclipse.commands.toggle_comment" commandName="Toggle Comment" category="_CRbD4IbMEeyoa9P_BoTCXA"/>
+  <commands xmi:id="_CRcSBYbMEeyoa9P_BoTCXA" elementId="io.emmet.eclipse.commands.increment_number_by_1" commandName="Increment number by 1" category="_CRbD4IbMEeyoa9P_BoTCXA"/>
+  <commands xmi:id="_CRcSBobMEeyoa9P_BoTCXA" elementId="io.emmet.eclipse.commands.evaluate_math_expression" commandName="Evaluate Math Expression" category="_CRbD4IbMEeyoa9P_BoTCXA"/>
+  <commands xmi:id="_CRcSB4bMEeyoa9P_BoTCXA" elementId="io.emmet.eclipse.commands.merge_lines" commandName="Merge Lines" category="_CRbD4IbMEeyoa9P_BoTCXA"/>
+  <commands xmi:id="_CRcSCIbMEeyoa9P_BoTCXA" elementId="io.emmet.eclipse.commands.encode_decode_data_url" commandName="Encode/Decode Data:URL" category="_CRbD4IbMEeyoa9P_BoTCXA"/>
+  <commands xmi:id="_CRcSCYbMEeyoa9P_BoTCXA" elementId="io.emmet.eclipse.commands.prev_edit_point" commandName="Previous Edit Point" category="_CRbD4IbMEeyoa9P_BoTCXA"/>
+  <commands xmi:id="_CRcSCobMEeyoa9P_BoTCXA" elementId="io.emmet.eclipse.commands.select_previous_item" commandName="Select Previous Item" category="_CRbD4IbMEeyoa9P_BoTCXA"/>
+  <commands xmi:id="_CRcSC4bMEeyoa9P_BoTCXA" elementId="io.emmet.eclipse.commands.next_edit_point" commandName="Next Edit Point" category="_CRbD4IbMEeyoa9P_BoTCXA"/>
+  <commands xmi:id="_CRcSDIbMEeyoa9P_BoTCXA" elementId="io.emmet.eclipse.commands.select_next_item" commandName="Select Next Item" category="_CRbD4IbMEeyoa9P_BoTCXA"/>
+  <commands xmi:id="_CRcSDYbMEeyoa9P_BoTCXA" elementId="io.emmet.eclipse.commands.remove_tag" commandName="Remove Tag" category="_CRbD4IbMEeyoa9P_BoTCXA"/>
+  <commands xmi:id="_CRcSDobMEeyoa9P_BoTCXA" elementId="io.emmet.eclipse.commands.matching_pair" commandName="Go to Matching Pair" category="_CRbD4IbMEeyoa9P_BoTCXA"/>
+  <commands xmi:id="_CRcSD4bMEeyoa9P_BoTCXA" elementId="io.emmet.eclipse.commands.split_join_tag" commandName="Split/Join Tag" category="_CRbD4IbMEeyoa9P_BoTCXA"/>
   <addons xmi:id="_ksHprnxcEeyydZ0u1Xoiiw" elementId="org.eclipse.e4.core.commands.service" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_ksHpr3xcEeyydZ0u1Xoiiw" elementId="org.eclipse.e4.ui.contexts.service" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_ksHpsHxcEeyydZ0u1Xoiiw" elementId="org.eclipse.e4.ui.bindings.service" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
@@ -3279,7 +3308,7 @@
   <addons xmi:id="_ksHptnxcEeyydZ0u1Xoiiw" elementId="MinMax Addon" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon"/>
   <addons xmi:id="_ksHpt3xcEeyydZ0u1Xoiiw" elementId="org.eclipse.ui.workbench.addon.0" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
   <addons xmi:id="_ksNJMHxcEeyydZ0u1Xoiiw" elementId="SplitterAddon" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.splitteraddon.SplitterAddon"/>
-  <addons xmi:id="_IYS0IKimEeS11vbz3f9ezw" elementId="org.eclipse.ui.ide.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
+  <addons xmi:id="_CTncQIbMEeyoa9P_BoTCXA" elementId="org.eclipse.ui.ide.addon.0" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
   <addons xmi:id="_dz0JgGOlEeSMMaPQU2nlzw" elementId="org.eclipse.ui.ide.application.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.ui.ide.application/org.eclipse.ui.internal.ide.application.addons.ModelCleanupAddon"/>
   <categories xmi:id="_ksakkHxcEeyydZ0u1Xoiiw" elementId="org.eclipse.ui.category.edit" name="Edit"/>
   <categories xmi:id="_ksakkXxcEeyydZ0u1Xoiiw" elementId="org.eclipse.mylyn.wikitext.ui.editor.category" name="WikiText Markup Editing Commands" description="commands for editing lightweight markup"/>
@@ -3339,4 +3368,5 @@
   <categories xmi:id="__9mnMoElEeyUV_o3G8nkDg" elementId="com.genuitec.eclipse.lsp4e.commandCategory" name="Command"/>
   <categories xmi:id="__9mnM4ElEeyUV_o3G8nkDg" elementId="com.genuitec.eclipse.codetogether.category" name="CodeTogether" description="CodeTogether Commands"/>
   <categories xmi:id="__9mnNIElEeyUV_o3G8nkDg" elementId="com.genuitec.eclipse.inlinesearch.commands.category" name="Inline Search"/>
+  <categories xmi:id="_CRbD4IbMEeyoa9P_BoTCXA" elementId="io.emmet.eclipse.commands.category" name="Emmet"/>
 </application:Application>

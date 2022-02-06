@@ -1,5 +1,7 @@
 package lv1;
 
+// 로또의 최고 수누이와 최저 순위
+
 public class LottoBestAndWorst {
 
     public static void main(String[] args) {
