@@ -1,6 +1,7 @@
 public class test {
     public static void main(String[] args) {
-        int[] num = { 0, 1, 1 };
+        String num = "12345";
 
+        System.out.println(num.substring(1));
     }
 }
