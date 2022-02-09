@@ -24,6 +24,25 @@ public class BiggestNum {
         return answer;
     }
 
+    public static int headNum(int num) {
+        if (num >= 10) {
+            num /= 10;
+            num = headNum(num);
+        }
+        return num;
+    }
+
+    public static boolean com(int num1, int num2) {
+        if (num1 != num2) {
+            String a = num1 + "" + num2;
+            String b = num2 + "" + num1;
+            if (Integer.parseInt(a) > Integer.parseInt(b)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public static void sort(int[] arr, int left, int right) {
         int pl = left;
         int pr = right;
@@ -57,22 +76,4 @@ public class BiggestNum {
             sort(arr, pl, right);
     }
 
-    public static int headNum(int num) {
-        if (num >= 10) {
-            num /= 10;
-            num = headNum(num);
-        }
-        return num;
-    }
-
-    public static boolean com(int num1, int num2) {
-        if (num1 != num2) {
-            String a = num1 + "" + num2;
-            String b = num2 + "" + num1;
-            if (Integer.parseInt(a) > Integer.parseInt(b)) {
-                return false;
-            }
-        }
-        return true;
-    }
 }

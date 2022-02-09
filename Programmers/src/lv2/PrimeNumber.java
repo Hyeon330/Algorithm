@@ -35,7 +35,6 @@ public class PrimeNumber {
         } else {
             return false;
         }
-
         return true;
     }
 
