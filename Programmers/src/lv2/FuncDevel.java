@@ -10,7 +10,6 @@ public class FuncDevel {
         ArrayList<Integer> arr = new ArrayList<>();
         int ct = 0;
         int ck = 0;
-
         while (ck < progresses.length) {
             ct = 0;
             for (int i = ck; i < progresses.length; i++) {
