@@ -1,7 +1,9 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class test {
     public static void main(String[] args) {
-        String num = "12345";
-
-        System.out.println(num.substring(1));
+        Queue<Integer> qu = new LinkedList<>();
+        LinkedList<Integer> li = (LinkedList<Integer>) qu;
     }
 }
