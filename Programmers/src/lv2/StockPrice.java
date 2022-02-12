@@ -14,15 +14,13 @@ public class StockPrice {
             qu.add(i);
         }
         for (int i = 0; i < l; i++) {
-            int sec = 0;
             int num = qu.poll();
             for (Integer s : qu) {
-                sec++;
+                answer[i]++;
                 if (num > s) {
                     break;
                 }
             }
-            answer[i] = sec;
         }
 
         // --------------------------------------------------
