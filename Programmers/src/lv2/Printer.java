@@ -7,20 +7,20 @@ public class Printer {
     public int solution(int[] priorities, int location) {
         int answer = 0;
         Queue<Integer> qu = new LinkedList<>();
-        LinkedList<Integer> li = (LinkedList<Integer>) qu;
         for (Integer integer : priorities) {
             qu.offer(integer);
         }
         boolean ck = true;
+
+        // LinkedList<Integer> li = (LinkedList<Integer>) qu;
         // while (ck) {
-        // // int imp = qu.poll();
         // for (int i = 0; i < qu.size(); i++) {
-        // if (/* img */qu.peek() < li.get(i)) {
-        // qu.offer(/* imp */qu.poll());
+        // if (qu.peek() < li.get(i)) {
+        // qu.offer(qu.poll());
         // break;
         // }
         // if (i == qu.size() - 1) {
-        // qu.remove(); // <- 없었음.
+        // qu.remove();
         // answer++;
         // if (location == 0) {
         // ck = false;
@@ -34,6 +34,8 @@ public class Printer {
         // location--;
         // }
         // }
+
+        // --------------------------------------------------
 
         sort(priorities, 0, priorities.length - 1);
         int size = priorities.length - 1;
