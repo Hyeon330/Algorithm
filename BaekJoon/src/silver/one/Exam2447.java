@@ -54,58 +54,14 @@ N이 3보다 클 경우, 크기 N의 패턴은 공백으로 채워진 가운데�
 import java.io.*;
 import java.util.Arrays;
 
-public class Exam2447_ {
+public class Exam2447 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 		StringBuffer sb = new StringBuffer();
 		int n = Integer.parseInt(bf.readLine());
 		char[][] star = new char[n][n];
 
-		for (char[] cs : star) {
-			Arrays.fill(cs, '*');
-		}
-		int start = 1;
-		int end = 2;
-		int primeN = isPrime(n);
-
-		// int x = primeN;
-		// int prime = primeN;
-		// for (int i = 0; i < star.length; i++) {
-		// for (int j = 0; j < star.length; j++) {
-		// // if (i % 3 == 1 && j % 3 == 1) {
-		// if (i % x >= start && i % x < end && j % x >= start && j % x < end) {
-		// star[i][j] = ' ';
-		// }
-		// }
-		// }
-
-		// x *= prime;
-		// start *= prime;
-		// end *= prime;
-		// for (int i = 0; i < star.length; i++) {
-		// for (int j = 0; j < star.length; j++) {
-		// // if (i % 9 >= 3 && i % 9 < 6 && j % 9 >= 3 && j % 9 < 6) {
-		// if (i % x >= start && i % x < end && j % x >= start && j % x < end) {
-		// star[i][j] = ' ';
-		// }
-		// }
-		// }
-
-		// x *= prime;
-		// start *= prime;
-		// end *= prime;
-		// for (int i = 0; i < star.length; i++) {
-		// for (int j = 0; j < star.length; j++) {
-		// // if (i % 27 >= 9 && i % 27 < 18 && j % 27 >= 9 && j % 27 < 18) {
-		// if (i % x >= start && i % x < end && j % x >= start && j % x < end) {
-		// star[i][j] = ' ';
-		// }
-		// }
-		// }
-
-		// -------------------------------------------------------------------------------
-
-		nonStar(star, n, primeN, primeN, start, end);
+		star(star, 0, 0, n, false);
 
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < n; j++) {
@@ -113,30 +69,37 @@ public class Exam2447_ {
 			}
 			sb.append("\n");
 		}
-		System.out.println(sb);
+		System.out.print(sb);
 	}
 
-	public static void nonStar(char[][] star, int n, int primeN, int x, int start, int end) {
-		if (n < x) {
-			return;
-		}
-		for (int i = 0; i < n; i++) {
-			for (int j = 0; j < n; j++) {
-				if (i % x >= start && i % x < end && j % x >= start && j % x < end) {
+	public static void star(char[][] star, int x, int y, int N, boolean blank) {
+		// 공백칸일 경우
+		if (blank) {
+			for (int i = x; i < x + N; i++) {
+				for (int j = y; j < y + N; j++) {
 					star[i][j] = ' ';
 				}
 			}
+			return;
 		}
-		x *= primeN;
-		start *= primeN;
-		end *= primeN;
-		nonStar(star, n, primeN, x, start, end);
-	}
 
-	public static int isPrime(int n) {
-		int i = 2;
-		while (n % i != 0)
-			i++;
-		return i;
+		if (N == 1) {
+			star[x][y] = '*';
+			return;
+		}
+
+		int size = N / 3;
+		int count = 0;
+		// x = 0, y = 0, N = 27, size = 9
+		for (int i = x; i < x + N; i += size) {
+			for (int j = y; j < y + N; j += size) {
+				count++;
+				if (count == 5) {
+					star(star, i, j, size, true);
+				} else {
+					star(star, i, j, size, false);
+				}
+			}
+		}
 	}
 }
