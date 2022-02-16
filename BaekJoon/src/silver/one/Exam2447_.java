@@ -68,40 +68,41 @@ public class Exam2447_ {
 		int end = 2;
 		int primeN = isPrime(n);
 
-		// int x = primeN;
-		// int prime = primeN;
-		// for (int i = 0; i < star.length; i++) {
-		// for (int j = 0; j < star.length; j++) {
-		// // if (i % 3 == 1 && j % 3 == 1) {
-		// if (i % x >= start && i % x < end && j % x >= start && j % x < end) {
-		// star[i][j] = ' ';
-		// }
-		// }
-		// }
+		int x = primeN;
+		int prime = primeN;
 
-		// x *= prime;
-		// start *= prime;
-		// end *= prime;
-		// for (int i = 0; i < star.length; i++) {
-		// for (int j = 0; j < star.length; j++) {
-		// // if (i % 9 >= 3 && i % 9 < 6 && j % 9 >= 3 && j % 9 < 6) {
-		// if (i % x >= start && i % x < end && j % x >= start && j % x < end) {
-		// star[i][j] = ' ';
-		// }
-		// }
-		// }
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < n; j++) {
+				// if (i % 3 >= 1 && i % 3 < 2 && j % 3 >= 1 && j % 3 < 2) {
+				if (i % x >= start && i % x < end && j % x >= start && j % x < end) {
+					star[i][j] = ' ';
+				}
+			}
+		}
 
-		// x *= prime;
-		// start *= prime;
-		// end *= prime;
-		// for (int i = 0; i < star.length; i++) {
-		// for (int j = 0; j < star.length; j++) {
-		// // if (i % 27 >= 9 && i % 27 < 18 && j % 27 >= 9 && j % 27 < 18) {
-		// if (i % x >= start && i % x < end && j % x >= start && j % x < end) {
-		// star[i][j] = ' ';
-		// }
-		// }
-		// }
+		x *= prime;
+		start *= prime;
+		end *= prime;
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < n; j++) {
+				// if (i % 9 >= 3 && i % 9 < 6 && j % 9 >= 3 && j % 9 < 6) {
+				if (i % x >= start && i % x < end && j % x >= start && j % x < end) {
+					star[i][j] = ' ';
+				}
+			}
+		}
+
+		x *= prime;
+		start *= prime;
+		end *= prime;
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < n; j++) {
+				// if (i % 27 >= 9 && i % 27 < 18 && j % 27 >= 9 && j % 27 < 18) {
+				if (i % x >= start && i % x < end && j % x >= start && j % x < end) {
+					star[i][j] = ' ';
+				}
+			}
+		}
 
 		// -------------------------------------------------------------------------------
 

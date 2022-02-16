@@ -27,7 +27,7 @@ package silver.four;
 0
 
 */
-public class Exam1002 {
+public class Exam1002_ {
     public static void main(String[] args) {
 
     }

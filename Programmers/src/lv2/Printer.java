@@ -41,15 +41,14 @@ public class Printer {
         int size = priorities.length - 1;
 
         while (ck) {
+            location--;
             if (qu.peek() == priorities[size - answer]) {
                 qu.remove();
-                location--;
                 answer++;
                 if (location < 0)
                     ck = false;
             } else {
                 qu.add(qu.poll());
-                location--;
                 if (location < 0)
                     location = qu.size() - 1;
             }
@@ -87,6 +86,7 @@ public class Printer {
     public static void main(String[] args) {
         Printer printer = new Printer();
         int[] priorities = { 1, 2, 8, 3, 4 };
+
         int location = 4;
 
         System.out.println(printer.solution(priorities, location));

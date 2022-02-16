@@ -51,8 +51,9 @@ N이 3보다 클 경우, 크기 N의 패턴은 공백으로 채워진 가운데�
 ***************************
 *
 */
-import java.io.*;
-import java.util.Arrays;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Exam2447 {
 	public static void main(String[] args) throws IOException {
