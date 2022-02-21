@@ -1,5 +1,6 @@
 package lv1;
 
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class NotFinishedPlayer {
@@ -13,10 +14,10 @@ public class NotFinishedPlayer {
         // for (String s : participant) {
         // map.put(s, map.get(s) + 1);
         // }
+
         for (String s : participant) {
             map.put(s, map.getOrDefault(s, 0) + 1);
         }
-
         for (String s : completion) {
             map.put(s, map.get(s) - 1);
         }
@@ -34,6 +35,7 @@ public class NotFinishedPlayer {
                 return key;
             }
         }
+
         return answer;
     }
 
@@ -42,11 +44,11 @@ public class NotFinishedPlayer {
         // String[] participant = { "leo", "kiki", "eden" };
         // String[] completion = { "eden", "kiki" };
 
-        String[] participant = { "marina", "josipa", "nikola", "vinko", "filipa" };
-        String[] completion = { "josipa", "filipa", "marina", "nikola" };
+        // String[] participant = { "marina", "josipa", "nikola", "vinko", "filipa" };
+        // String[] completion = { "josipa", "filipa", "marina", "nikola" };
 
-        // String[] participant = { "mislav", "stanko", "mislav", "ana" };
-        // String[] completion = { "stanko", "ana", "mislav" };
+        String[] participant = { "mislav", "stanko", "mislav", "ana" };
+        String[] completion = { "stanko", "ana", "mislav" };
 
         System.out.println(nfp.solution(participant, completion));
     }

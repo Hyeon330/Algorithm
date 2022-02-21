@@ -93,7 +93,44 @@ public class BestAlbum {
 
         // ---------------------------------------------------------------------------------------
 
-        int[] answer = {};
+        HashMap<String, Integer> mapSum = new HashMap<>();
+        HashMap<String, ArrayList<Integer>> mapNumArr = new HashMap<>();
+        int genresSize = genres.length;
+        for (int i = 0; i < genresSize; i++) {
+            if (!mapNumArr.containsKey(genres[i])) {
+                mapNumArr.put(genres[i], new ArrayList<>());
+            }
+            mapNumArr.get(genres[i]).add(plays[i]);
+            mapSum.put(genres[i], mapSum.getOrDefault(genres[i], 0) + plays[i]);
+        }
+        List<String> albumList = new ArrayList<>(mapSum.keySet());
+
+        Collections.sort(albumList, new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                return mapSum.get(o2).compareTo(mapSum.get(o1));
+            }
+        });
+        ArrayList<Integer> answerArr = new ArrayList<>();
+        for (String album : albumList) {
+            Collections.sort(mapNumArr.get(album), Collections.reverseOrder());
+            for (int i = 0; i < mapNumArr.get(album).size(); i++) {
+                for (int j = 0; j < genresSize; j++) {
+                    if (mapNumArr.get(album).get(i) == plays[j] && album.equals(genres[j])) {
+                        answerArr.add(j);
+                        plays[j] = 0;
+                        break;
+                    }
+                }
+                if (i == 1) {
+                    break;
+                }
+            }
+        }
+        int[] answer = new int[answerArr.size()];
+        for (int i = 0; i < answerArr.size(); i++) {
+            answer[i] = answerArr.get(i);
+        }
         return answer;
     }
 
