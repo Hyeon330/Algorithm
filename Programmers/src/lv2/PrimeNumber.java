@@ -48,6 +48,7 @@ public class PrimeNumber {
         while (it.hasNext()) {
             int num = it.next();
             if (isPrime(num)) {
+                System.out.println(num);
                 answer++;
             }
         }
@@ -58,7 +59,8 @@ public class PrimeNumber {
 
     public static void main(String[] args) {
         PrimeNumber pn = new PrimeNumber();
-        String numbers = "011";
+        // String numbers = "011";
+        String numbers = "4121";
         System.out.println(pn.solution(numbers));
     }
 }
