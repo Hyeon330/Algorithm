@@ -1,7 +1,9 @@
+import java.util.Arrays;
+
 public class test {
     public static void main(String[] args) {
-        for (int i = 0; i < 16; i++) {
-            System.out.println(String.format("%04d", Integer.parseInt(Integer.toBinaryString(i))));
-        }
+
+        boolean[] check = new boolean[5];
+        System.out.println(Arrays.toString(check));
     }
 }

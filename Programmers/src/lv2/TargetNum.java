@@ -1,5 +1,7 @@
 package lv2;
 
+import java.util.Queue;
+
 // 깊이/너비 우선 탐색(DFS/BFS) > 타겟 넘버
 
 public class TargetNum {
@@ -16,26 +18,25 @@ public class TargetNum {
     }
 
     public int solution(int[] numbers, int target) {
-        // dfs(0, 0, numbers, target);
-        // return answer;
+        dfs(0, 0, numbers, target);
         // ---------------------------------------------------------------------------------------------
-        int answer = 0;
+        // int answer = 0;
 
-        for (int i = 0; i < Math.pow(numbers.length, 2); i++) {
-            int result = 0;
-            String pnm = String.format("%0" + numbers.length + "d",
-                    Integer.parseInt(Integer.toBinaryString(i)));
-            for (int j = 0; j < numbers.length; j++) {
-                if (pnm.charAt(j) == '0') {
-                    result += numbers[j];
-                } else {
-                    result -= numbers[j];
-                }
-            }
-            if (result == target) {
-                answer++;
-            }
-        }
+        // for (int i = 0; i < Math.pow(numbers.length, 2); i++) {
+        // int result = 0;
+        // String pnm = String.format("%0" + numbers.length + "d",
+        // Integer.parseInt(Integer.toBinaryString(i)));
+        // for (int j = 0; j < numbers.length; j++) {
+        // if (pnm.charAt(j) == '0') {
+        // result += numbers[j];
+        // } else {
+        // result -= numbers[j];
+        // }
+        // }
+        // if (result == target) {
+        // answer++;
+        // }
+        // }
 
         return answer;
     }
