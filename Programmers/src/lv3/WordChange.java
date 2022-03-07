@@ -6,6 +6,10 @@ public class WordChange {
         return answer;
     }
 
+    void bfs() {
+
+    }
+
     public static void main(String[] args) {
         WordChange wc = new WordChange();
 
