@@ -9,7 +9,7 @@ public class Network {
         // 플래그
         boolean[] check = new boolean[n];
 
-        for (int i = 0; i < check.length; i++) {
+        for (int i = 0; i < n; i++) {
             if (dfs(i, computers, check)) {
                 answer++;
             }

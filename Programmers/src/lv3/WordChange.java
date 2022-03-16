@@ -1,13 +1,16 @@
 package lv3;
 
 public class WordChange {
-    public int solution(String begin, String target, String[] words) {
-        int answer = 0;
-        return answer;
+    boolean[] flag;
+    int answer = 0;
+
+    void dfs() {
+
     }
 
-    void bfs() {
-
+    public int solution(String begin, String target, String[] words) {
+        flag = new boolean[words.length];
+        return answer;
     }
 
     public static void main(String[] args) {
