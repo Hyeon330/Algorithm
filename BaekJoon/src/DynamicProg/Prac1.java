@@ -27,6 +27,10 @@ public class Prac1 {
 			d[i] = Math.max(d[i - 1], d[i - 2] + arr[i]);
 		}
 		
+		for (int i : d) {
+			System.out.print(i+" ");
+		}
+		System.out.println();
 		System.out.println(d[n - 1]);
 	}
 }
