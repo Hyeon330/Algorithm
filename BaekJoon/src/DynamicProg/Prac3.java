@@ -20,23 +20,21 @@ public class Prac3 {
 		}
 		
 		int[] d = new int[m];
+		// 구하려는 원의 +1을 초기값으로 한 이유는 Math.min함수를 사용하기 때문에
 		for(int i = 1; i < m; i++) {
-			d[i] = -1;
+			d[i] = m;
 		}
 		
+		// 바텀업 방식(1원부터 m원까지 최소 화폐계수를 구함)
 		for(int i = 0; i < n; i++) {
 			for(int j = arr[i]; j < m; j++) {
 				if(d[j - arr[i]] != -1) {
-					System.out.println("hello");
 					d[j] = Math.min(d[j],  d[j - arr[i]] + 1);
 				}
 			}
 		}
 		
-		for (int i : d) {
-			System.out.print(i+" ");
-		}
-		System.out.println();
-		System.out.println(d[m-1]);
+		if(d[m-1]==m) System.out.println(-1);
+		else System.out.println(d[m-1]);
 	}
 }
