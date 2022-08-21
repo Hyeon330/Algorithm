@@ -25,16 +25,18 @@ public class Prac3 {
 		}
 		
 		for(int i = 0; i < n; i++) {
-			System.out.println(arr[i]);
 			for(int j = arr[i]; j < m; j++) {
-				System.out.println(j);
-				System.out.println(arr[i]);
 				if(d[j - arr[i]] != -1) {
-					d[j] = Math.min(d[j],  d[j - arr[j]] + 1);
+					System.out.println("hello");
+					d[j] = Math.min(d[j],  d[j - arr[i]] + 1);
 				}
 			}
 		}
 		
-		System.out.println(d[m]);
+		for (int i : d) {
+			System.out.print(i+" ");
+		}
+		System.out.println();
+		System.out.println(d[m-1]);
 	}
 }
