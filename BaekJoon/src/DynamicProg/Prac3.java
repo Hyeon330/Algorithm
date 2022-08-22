@@ -3,6 +3,7 @@ package dynamicProg;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Prac3 {
@@ -20,10 +21,9 @@ public class Prac3 {
 		}
 		
 		int[] d = new int[m];
+		Arrays.fill(d, m);
 		// 구하려는 원의 +1을 초기값으로 한 이유는 Math.min함수를 사용하기 때문에
-		for(int i = 1; i < m; i++) {
-			d[i] = m;
-		}
+		d[0] = 0;
 		
 		// 바텀업 방식(1원부터 m원까지 최소 화폐계수를 구함)
 		for(int i = 0; i < n; i++) {
