@@ -28,7 +28,12 @@ public class Prac4 {
 				for(int k = j; k < arr.length; k += m) {
 					d[j] = Math.max(d[j], arr[k]);
 				}
+				if(j != 0) {
+					d[j] += d[j - 1];
+				}
 			}
+			
+			System.out.println(d[m - 1]);
 		}
 	}
 }
