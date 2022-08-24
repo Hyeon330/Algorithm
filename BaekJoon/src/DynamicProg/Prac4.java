@@ -29,38 +29,29 @@ public class Prac4 {
 			for(int j = 0; j < n; j++) {
 				d[j][0] = arr[j][0];
 			}
+//			---------------------------------------
 			
 			for(int j = 0; j < n; j++) {
 				for(int k = 1; k < m; k++) {
 					if(j == 0) {
-						if(d[j][k - 1] > d[j + 1][k - 1]) d[j][k] = d[j][k - 1] + arr[j][k];
-						else d[j][k] = d[j + 1][k - 1] + arr[j][k];
+						if(d[j][k - 1] > d[j + 1][k - 1]) d[j][k] = d[j][k - 1];
+						else d[j][k] = d[j + 1][k - 1];
 					}else if (j == n - 1) {
-						if(d[j][k - 1] > d[j - 1][k - 1]) d[j][k] = d[j][k - 1] + arr[j][k];
-						else d[j][k] = d[j - 1][k - 1] + arr[j][k];
+						if(d[j][k - 1] > d[j - 1][k - 1]) d[j][k] = d[j][k - 1];
+						else d[j][k] = d[j - 1][k - 1];
 					}else {
 						d[j][k] = Math.max(d[j][k], d[j - 1][k - 1]);
 						d[j][k] = Math.max(d[j][k], d[j][k - 1]);
 						d[j][k] = Math.max(d[j][k], d[j + 1][k - 1]);
-						d[j][k] += arr[j][k];
 					}
+					d[j][k] += arr[j][k];
+					System.out.println(d[j][k]);
 				}
 			}
 			
 			for(int j = 0; j < n; j++) {
 				System.out.println(d[j][m - 1]);
 			}
-			
-//			for(int j = 0; j < m; j++) {
-//				for(int k = j; k < arr.length; k += m) {
-//					d[j] = Math.max(d[j], arr[k]);
-//				}
-//				if(j != 0) {
-//					d[j] += d[j - 1];
-//				}
-//			}
-//			
-//			System.out.println(d[m - 1]);
 		}
 	}
 }
