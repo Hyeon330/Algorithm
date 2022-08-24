@@ -10,6 +10,7 @@ public class Prac4 {
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 		
 		int T = Integer.parseInt(bf.readLine());
+		StringBuffer sb = new StringBuffer();
 		
 		StringTokenizer st = null;
 		for(int i = 0; i < T; i++) {
@@ -31,27 +32,30 @@ public class Prac4 {
 			}
 //			---------------------------------------
 			
-			for(int j = 0; j < n; j++) {
-				for(int k = 1; k < m; k++) {
-					if(j == 0) {
-						if(d[j][k - 1] > d[j + 1][k - 1]) d[j][k] = d[j][k - 1];
-						else d[j][k] = d[j + 1][k - 1];
-					}else if (j == n - 1) {
-						if(d[j][k - 1] > d[j - 1][k - 1]) d[j][k] = d[j][k - 1];
-						else d[j][k] = d[j - 1][k - 1];
+			for(int j = 1; j < m; j++) {
+				for(int k = 0; k < n; k++) {
+					if(k == 0) {
+						if(d[k][j - 1] > d[k + 1][j - 1]) d[k][j] = d[k][j - 1];
+						else d[k][j] = d[k + 1][j - 1];
+					}else if (k == n - 1) {
+						if(d[k][j - 1] > d[k - 1][j - 1]) d[k][j] = d[k][j - 1];
+						else d[k][j] = d[k - 1][j - 1];
 					}else {
-						d[j][k] = Math.max(d[j][k], d[j - 1][k - 1]);
-						d[j][k] = Math.max(d[j][k], d[j][k - 1]);
-						d[j][k] = Math.max(d[j][k], d[j + 1][k - 1]);
+						d[k][j] = Math.max(d[k][j], d[k - 1][j - 1]);
+						d[k][j] = Math.max(d[k][j], d[k][j - 1]);
+						d[k][j] = Math.max(d[k][j], d[k + 1][j - 1]);
 					}
-					d[j][k] += arr[j][k];
-					System.out.println(d[j][k]);
+					d[k][j] += arr[k][j];
 				}
 			}
 			
+			int result = 0;
 			for(int j = 0; j < n; j++) {
-				System.out.println(d[j][m - 1]);
+				result = Math.max(result, d[j][m - 1]);
 			}
+			sb.append(result + "\n");
 		}
+		
+		System.out.print(sb);
 	}
 }
