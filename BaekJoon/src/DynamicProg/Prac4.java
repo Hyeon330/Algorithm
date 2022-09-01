@@ -34,18 +34,26 @@ public class Prac4 {
 			
 			for(int j = 1; j < m; j++) {
 				for(int k = 0; k < n; k++) {
-					if(k == 0) {
-						if(d[k][j - 1] > d[k + 1][j - 1]) d[k][j] = d[k][j - 1];
-						else d[k][j] = d[k + 1][j - 1];
-					}else if (k == n - 1) {
-						if(d[k][j - 1] > d[k - 1][j - 1]) d[k][j] = d[k][j - 1];
-						else d[k][j] = d[k - 1][j - 1];
-					}else {
-						d[k][j] = Math.max(d[k][j], d[k - 1][j - 1]);
-						d[k][j] = Math.max(d[k][j], d[k][j - 1]);
-						d[k][j] = Math.max(d[k][j], d[k + 1][j - 1]);
-					}
-					d[k][j] += arr[k][j];
+//					if(k == 0) {
+//						if(d[k][j - 1] > d[k + 1][j - 1]) d[k][j] = d[k][j - 1];
+//						else d[k][j] = d[k + 1][j - 1];
+//					}else if (k == n - 1) {
+//						if(d[k][j - 1] > d[k - 1][j - 1]) d[k][j] = d[k][j - 1];
+//						else d[k][j] = d[k - 1][j - 1];
+//					}else {
+//						d[k][j] = Math.max(d[k + 1][j - 1], Math.max(d[k - 1][j - 1], d[k][j - 1]));
+//					}
+//					d[k][j] += arr[k][j];
+					
+					int leftUp, left, leftDown;
+					if(k == 0) leftUp = 0;
+					else leftUp = d[k - 1][j - 1];
+					
+					if(k == n - 1) leftDown = 0;
+					else leftDown = d[k + 1][j - 1];
+					
+					left = d[k][j - 1];
+					d[k][j] = Math.max(leftUp, Math.max(left, leftDown)) + arr[k][j];
 				}
 			}
 			
