@@ -16,29 +16,36 @@ public class Ex1699 {
 			}
 		}
 	}
+	
 	public static void main(String[] args) throws IOException {
 		int n = Integer.parseInt(new BufferedReader(new InputStreamReader(System.in)).readLine());
 		int[] dp = new int[n + 1];
+
+        for (int i = 1; i <= n; i++) {
+            dp[i] = i;
+            for (int j = 1; j * j <= i; j++) {
+                if (dp[i] > dp[i - j * j] + 1) {
+                    dp[i] = dp[i - j * j] + 1;
+                }
+            }
+        }
+        System.out.println(dp[n]);
 		
-		int cnt = 0;
-		int s = 1;
-		for(int i = 1; i <= n; i++) {
-			cnt++;
-			if(s == cnt) {
-				s += 2;
-				cnt = 0;
-				dp[i] = 1;
-			}else {
-				f(i, i, dp);
-			}
-		}
-		
-		System.out.println(dp[n]);
-//		System.out.println(Math.sqrt(100000));
-//		System.out.println(Math.sqrt(10000));
-//		System.out.println(Math.pow(316, 2));
-//		System.out.println(Math.sqrt(144));
-		
+//		-----------------------------------------------------
+//		int cnt = 0;
+//		int s = 1;
+//		for(int i = 1; i <= n; i++) {
+//			cnt++;
+//			if(s == cnt) {
+//				s += 2;
+//				cnt = 0;
+//				dp[i] = 1;
+//			}else {
+//				f(i, i, dp);
+//			}
+//		}
+//		
+//		System.out.println(dp[n]);
 //		--------------------------------------------------------
 //		int cnt = 0;
 //		int prev = 0;
