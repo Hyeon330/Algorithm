@@ -57,7 +57,6 @@ public class Ex7576 {
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         Queue<Node> queue = new LinkedList<Node>();
-        int result;
 
         StringTokenizer st = new StringTokenizer(bf.readLine());
         int col = Integer.parseInt(st.nextToken());
@@ -71,11 +70,7 @@ public class Ex7576 {
                     queue.add(new Node(i, j));
             }
         }
-
-        result = bfs(arr, queue, row, col);
-        if (isTomato(arr))
-            System.out.println(result);
-        else
-            System.out.println(-1);
+        int result = bfs(arr, queue, row, col);
+        System.out.println(isTomato(arr) ? result : -1);
     }
 }
