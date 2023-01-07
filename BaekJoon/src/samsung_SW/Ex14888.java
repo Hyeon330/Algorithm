@@ -39,14 +39,16 @@ public class Ex14888 {
 
         N = Integer.parseInt(bf.readLine());
         int[] numArr = new int[N];
+
         st = new StringTokenizer(bf.readLine());
         for (int i = 0; i < N; i++)
             numArr[i] = Integer.parseInt(st.nextToken());
+
         int[] opNumArr = new int[4];
         st = new StringTokenizer(bf.readLine());
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 4; i++)
             opNumArr[i] = Integer.parseInt(st.nextToken());
-        }
+
         func(numArr, opNumArr, numArr[0], 0);
         System.out.println(max);
         System.out.println(min);

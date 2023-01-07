@@ -51,7 +51,7 @@ public class Ex14889 {
                 result = teamGap;
             return ;
         }
-        int limit = num + oneTeamN;
+        int limit = num + oneTeamN; // limit = 3
         for (int i = num; i < N - 1 && i <= limit; i++) {
             func(arr, t1, i + 1, c + 1);
         }
