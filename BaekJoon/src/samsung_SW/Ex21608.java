@@ -3,7 +3,10 @@ package samsung_SW;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.StringTokenizer;
 
 public class Ex21608 {
     static int[] ud = {-1, 0, 1, 0};
@@ -47,10 +50,10 @@ public class Ex21608 {
                             tmpR = j + ud[l];
                             tmpC = k + rl[l];
                             if (tmpR >= 0 && tmpR < N && tmpC >= 0 && tmpC < N) {
-                                if (seat[tmpR][tmpC] == 0)
-                                    blackCnt++;
                                 if (set.contains(seat[tmpR][tmpC]))
                                     likeCnt++;
+                                if (seat[tmpR][tmpC] == 0)
+                                    blackCnt++;
                             }
                         }
                         if (likeMax < likeCnt) {
