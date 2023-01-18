@@ -1,11 +1,10 @@
-package samsungDX_test.day1;
+package samsungDX.No03;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.HashSet;
 
-public class No3 {
+public class No03 {
     static String manList;
     static int cnt, max;
 

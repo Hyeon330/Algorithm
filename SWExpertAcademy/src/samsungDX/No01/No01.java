@@ -1,11 +1,11 @@
-package samsungDX_test.day1;
+package samsungDX.No01;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-public class No1 {
+public class No01 {
 	static boolean isUseAllNum(boolean[] cntNum) {
 		return cntNum[0] || cntNum[1] || cntNum[2] || cntNum[3] || cntNum[4] || cntNum[5] || cntNum[6] || cntNum[7] || cntNum[8] || cntNum[9];
 	}

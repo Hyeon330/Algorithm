@@ -1,4 +1,4 @@
-package samsungDX_test;
+package samsungDX.pre_test;
 
 import java.io.BufferedReader;
 import java.io.IOException;
