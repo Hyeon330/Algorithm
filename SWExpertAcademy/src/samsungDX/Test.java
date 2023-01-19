@@ -1,18 +1,15 @@
 package samsungDX;
 
-import java.util.ArrayList;
-import java.util.List;
 
-class N{
-    int data;
-    N () {}
-}
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
 public class Test {
-    public static void main(String[] args) {
-        N[] n = new N[1000];
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        for (int i = 0; i < 1000; i++) {
-            System.out.println(n[i]);
-        }
+        System.out.println(2 / 2 * 2 == 2);
     }
 }
