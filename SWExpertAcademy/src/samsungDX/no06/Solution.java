@@ -1,4 +1,4 @@
-package samsungDX.No07;
+package samsungDX.no06;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -6,17 +6,15 @@ import java.util.StringTokenizer;
 
 class Node {
     public int data;
-    public Node prev;
     public Node next;
 
     public Node(int data) {
         this.data = data;
-        this.prev = null;
         this.next = null;
     }
 }
 
-public class UserSolution {
+class UserSolution {
 
     private final static int MAX_NODE = 10000;
 
@@ -37,69 +35,62 @@ public class UserSolution {
     public void addNode2Head(int data) {
         Node n = getNode(data);
         n.next = head.next;
-        n.prev = head;
         head.next = n;
     }
 
     public void addNode2Tail(int data) {
         Node n = getNode(data);
-        Node tmpN = head;
-        while (tmpN.next != null)
-            tmpN = tmpN.next;
-        tmpN.next = n;
-        n.prev = tmpN;
+        Node prev = head;
+        while (prev.next != null)
+            prev = prev.next;
+        prev.next = n;
     }
 
     public void addNode2Num(int data, int num) {
-        Node tmpN = head;
+        Node prev = head;
         for (int i = 1; i < num; i++) {
-            if (tmpN == null)
+            if (prev == null)
                 return ;
-            tmpN = tmpN.next;
+            prev = prev.next;
         }
         Node n = getNode(data);
-        n.next = tmpN.next;
-        n.prev = tmpN;
-        tmpN.next = n;
-    }
-
-    public int findNode(int data) {
-        Node n = head.next;
-        while (n != null && n.data != data)
-            n = n.next;
-        return n.data;
+        n.next = prev.next;
+        prev.next = n;
     }
 
     public void removeNode(int data) {
-
+        Node prev = head;
+        while (prev.next != null && prev.next.data != data)
+            prev = prev.next;
+        if (prev.next != null)
+            prev.next = prev.next.next;
     }
 
     public int getList(int[] output) {
-
-    }
-
-    public int getReversedList(int[] output) {
-
+        Node n = head.next;
+        int cnt = -1;
+        while (++cnt < MAX_NODE && n != null) {
+            output[cnt] = n.data;
+            n = n.next;
+        }
+        return cnt;
     }
 }
 
 public class Solution {
-
     private final static int MAX_NODE = 10000;
     private final static int ADD_HEAD = 1;
     private final static int ADD_TAIL = 2;
     private final static int ADD_NUM = 3;
-    private final static int FIND = 4;
-    private final static int REMOVE = 5;
-    private final static int PRINT = 6;
-    private final static int PRINT_REVERSE = 7;
+    private final static int REMOVE = 4;
+    private final static int PRINT = 5;
     private final static int END = 99;
 
     private final static UserSolution usersolution = new UserSolution();
 
     private static BufferedReader br;
 
-    public static void run() throws Exception {
+    private static void run() throws Exception {
         int cmd, data, num, ret;
         int[] output = new int[MAX_NODE];
         String str;
@@ -127,12 +118,6 @@ public class Solution {
                     usersolution.addNode2Num(data, num);
                     break;
 
-                case FIND :
-                    data = Integer.parseInt(st.nextToken());
-                    num = usersolution.findNode(data);
-                    System.out.println(num);
-                    break;
-
                 case REMOVE :
                     data = Integer.parseInt(st.nextToken());
                     usersolution.removeNode(data);
@@ -146,20 +131,11 @@ public class Solution {
                     System.out.println();
                     break;
 
-                case PRINT_REVERSE :
-                    ret = usersolution.getReversedList(output);
-                    for(int i = 0; i < ret; i++) {
-                        System.out.print(output[i] + " ");
-                    }
-                    System.out.println();
-                    break;
-
                 case END :
                     return;
             }
         }
     }
-
     public static void main(String[] args) throws Exception {
         int TC;
         //System.setIn(new java.io.FileInputStream("res/sample_input.txt"));

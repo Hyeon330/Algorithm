@@ -1,4 +1,4 @@
-package samsungDX.No03;
+package samsungDX.no03;
 
 import java.io.BufferedReader;
 import java.io.IOException;
