@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class No02_ {
+public class Solution_ {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
@@ -17,8 +17,7 @@ public class No02_ {
             st = new StringTokenizer(br.readLine());
             N = Integer.parseInt(st.nextToken());
             M = Integer.parseInt(st.nextToken());
-            for (int j = 0; N-- != 0; j++)
-                if ((M | (1 << j)) != M) break;
+            while (N-- != 0 && M % 2 == 1) M /= 2;
             if (++N == 0) sb.append("#" + i + " " + "ON\n");
             else sb.append("#" + i + " " + "OFF\n");
         }
