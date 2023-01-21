@@ -4,22 +4,24 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class No03 {
+public class Solution_1 {
     static String manList;
-    static int cnt, max;
+    static int cnt, maxDay;
+    static final int maxNum = 1000000007;
 
-    static int setManager(int idx) {
-        if (manList.charAt(idx) == 'A') return 1;
-        if (manList.charAt(idx) == 'B') return 2;
-        if (manList.charAt(idx) == 'C') return 4;
+    static int getManager(int day) {
+        if (manList.charAt(day) == 'A') return 1;
+        if (manList.charAt(day) == 'B') return 2;
+        if (manList.charAt(day) == 'C') return 4;
         else return 8;
     }
     static void func(int prev, int idx) {
-        if (idx == max) {
+        if (idx == maxDay) {
             cnt++;
-            return ;
+            cnt %= maxNum;
+            return;
         }
-        int M = setManager(idx);
+        int M = getManager(idx);
         for (int i = 0; i < 16; i++) {
             if (((prev & i) != 0) && ((M & i) != 0))
                 func(i, idx + 1);
@@ -35,11 +37,11 @@ public class No03 {
         for (int i = 1; i <= T; i++) {
             manList = br.readLine();
             cnt = 0;
-            max = manList.length();
+            maxDay = manList.length();
             func(1, 0);
             sb.append("#" + i + " " + cnt + "\n");
         }
-        System.out.println(sb.toString());
+        System.out.print(sb.toString());
     }
 }
 /*
