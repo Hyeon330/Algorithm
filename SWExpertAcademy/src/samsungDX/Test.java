@@ -2,6 +2,10 @@ package samsungDX;
 
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Scanner;
+import java.util.Set;
 
 public class Test {
     static void fun(Integer a) {
@@ -10,6 +14,7 @@ public class Test {
         fun(++a);
     }
     public static void main(String[] args) throws IOException {
-        System.out.println(0 % 123);
+        LinkedList<Integer> lst1 = new LinkedList<>();
+
     }
 }
