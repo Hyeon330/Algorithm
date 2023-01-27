@@ -1,4 +1,4 @@
-package samsungDX.no12;
+package samsungDX.no12.s2;
 
 import java.util.Scanner;
 
@@ -28,6 +28,7 @@ class Solution {
         while (m-- > 0) {
 
             cmd = sc.nextInt();
+//            System.out.println(m + " : " + cmd);
 
             if (cmd == CMD_MKDIR) {
                 inputStr = sc.next() + " ";
