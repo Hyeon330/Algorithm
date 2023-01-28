@@ -1,4 +1,4 @@
-package samsungDX.battle.no01;
+package samsungDX.battle.no01.s4;
 
 class Node {
     int id, team;
@@ -69,35 +69,39 @@ class UserSolution {
     }
 
     public void updateTeam(int mTeam, int mChangeScore) {
-        int score, i, loop, loopCnt = 5;
+        int score;
 
-        if (mChangeScore == 0) return;
         if (mChangeScore < 0) {
-            i = 1;
-            loop = 1;
-        } else {
-            i = MAX_TEAM - 1;
-            loop = -1;
-        }
-        while (loopCnt-- > 0) {
-            if (teams[mTeam][i] != null) {
+            for (int i = 1; i < MAX_TEAM; i++) {
                 score = i + mChangeScore;
                 if (score < 1)
                     score = 1;
+                if (i == score || teams[mTeam][i] == null) continue;
+                if (teams[mTeam][score] == null)
+                    teams[mTeam][score] = teams[mTeam][i];
+                else {
+                    teams[mTeam][score].tail.prev.next = teams[mTeam][i].head.next;
+                    teams[mTeam][i].head.next.prev = teams[mTeam][score].tail.prev;
+                    teams[mTeam][score].tail = teams[mTeam][i].tail;
+                }
+                teams[mTeam][i] = null;
+            }
+        }
+        if (mChangeScore > 0) {
+            for (int i = MAX_TEAM - 1; i > 0; i--) {
+                score = i + mChangeScore;
                 if (score > 5)
                     score = 5;
-                if (i != score) {
-                    if (teams[mTeam][score] == null)
-                        teams[mTeam][score] = teams[mTeam][i];
-                    else {
-                        teams[mTeam][score].tail.prev.next = teams[mTeam][i].head.next;
-                        teams[mTeam][i].head.next.prev = teams[mTeam][score].tail.prev;
-                        teams[mTeam][score].tail = teams[mTeam][i].tail;
-                    }
-                    teams[mTeam][i] = null;
+                if (i == score || teams[mTeam][i] == null) continue;
+                if (teams[mTeam][score] == null)
+                    teams[mTeam][score] = teams[mTeam][i];
+                else {
+                    teams[mTeam][score].tail.prev.next = teams[mTeam][i].head.next;
+                    teams[mTeam][i].head.next.prev = teams[mTeam][score].tail.prev;
+                    teams[mTeam][score].tail = teams[mTeam][i].tail;
                 }
+                teams[mTeam][i] = null;
             }
-            i += loop;
         }
     }
 

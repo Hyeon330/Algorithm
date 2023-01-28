@@ -1,4 +1,4 @@
-package samsungDX.battle.no01;
+package samsungDX.battle.no01.s4;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -35,6 +35,7 @@ class Solution
 
             int cmd;
             cmd = Integer.parseInt(st.nextToken());
+//            System.out.println(cmd);
 
             switch(cmd)
             {
@@ -66,6 +67,7 @@ class Solution
                     mTeam = Integer.parseInt(st.nextToken());
                     userAns = usersolution.bestSoldier(mTeam);
                     ans = Integer.parseInt(st.nextToken());
+//                    System.out.println(userAns + " " + ans);
                     if (userAns != ans) {
                         isCorrect = false;
                     }
