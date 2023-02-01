@@ -1,8 +1,9 @@
-package samsungDX.no15.s1;
+package samsungDX.no15_;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
@@ -22,6 +23,7 @@ class Node{
 
 class Graph {
     Node[] nodes;
+    HashMap<Long, Node> dpMap = new HashMap<>();
 
     Graph(int N) {
         nodes = new Node[N + 1];
@@ -33,22 +35,24 @@ class Graph {
         nodes[p].adjacent.add(nodes[num]);
     }
 
-    int lca(Node a, Node b) {
-        int cnt = 0;
-
-        while (a.deep != b.deep) {
-            if (a.deep > b.deep)
-                a = a.v;
-            else
-                b = b.v;
-            cnt++;
-        }
-        while (a.num != b.num) {
-            a = a.v;
+    Node lca(Node a, Node b) {
+        long key;
+        if (a.deep < b.deep)
             b = b.v;
-            cnt += 2;
-        }
-        return cnt;
+
+        if (a == b) return a;
+
+        key = (long)a.num * 100000 + (long)b.num;
+        if (dpMap.containsKey(key))
+            return dpMap.get(key);
+
+        a = a.v;
+        b = b.v;
+        Node result = lca(a, b);
+
+        dpMap.put(key, result);
+
+        return result;
     }
 }
 
@@ -59,7 +63,7 @@ public class Solution {
         StringTokenizer st;
         Queue<Node> queue;
         Graph g;
-        Node n1, n2;
+        Node n1, n2, sameV;
         int T, N, ret;
 
         T = Integer.parseInt(br.readLine());
@@ -72,13 +76,17 @@ public class Solution {
             st = new StringTokenizer(br.readLine());
             for (int i = 2; i < N + 1; i++)
                 g.add(i, Integer.parseInt(st.nextToken()));
+
             while (!queue.isEmpty()) {
                 n1 = queue.poll();
                 for (Node n : n1.adjacent)
                     queue.offer(n);
                 n2 = queue.peek();
-                if (n2 != null)
-                    ret += g.lca(n1, n2);
+                if (n2 != null) {
+                    sameV = g.lca(n1, n2);
+                    ret += n1.deep - sameV.deep;
+                    ret += n2.deep - sameV.deep;
+                }
             }
             sb.append("#" + t + " " + ret + "\n");
         }

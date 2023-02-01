@@ -1,4 +1,4 @@
-package samsungDX.no15.cf;
+package samsungDX.no15_.cf;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
