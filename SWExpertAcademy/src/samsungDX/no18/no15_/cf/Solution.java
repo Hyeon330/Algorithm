@@ -1,4 +1,4 @@
-package samsungDX.no15_.cf;
+package samsungDX.no18.no15_.cf;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -52,11 +52,7 @@ public class Solution{
         if (cache.containsKey(key)){
             return cache.get(key);
         }
-
-        a = nodes.get(a).parent;
-        b = nodes.get(b).parent;
-
-        int result = findLCA2(nodes, a, b);
+        int result = findLCA2(nodes, nodes.get(a).parent, nodes.get(b).parent);
 
         cache.put(key, result);
 
