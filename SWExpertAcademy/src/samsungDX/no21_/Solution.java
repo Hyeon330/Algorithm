@@ -1,4 +1,4 @@
-package samsungDX.no21;
+package samsungDX.no21_;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -10,17 +10,14 @@ public class Solution {
         if (i <= 0 || K <= 0) return 0;
         if (V[i] > K) {
             int value = func(i - 1, K, V, C);
-//            System.out.println(i - 1 + " " + W + " " + value);
             return value;
         } else {
             int left = func(i - 1, K, V, C);
-//            System.out.println(i - 1 + " " + W + " " + left);
             int right = func(i - 1, K - V[i], V, C);
-//            System.out.println(i - 1 + " " + (W - w[i]) + " " + right);
             return Math.max(left, C[i] + right);
         }
     }
-    // W = K, w = 무게 배열, p = 가치 배열
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuffer sb = new StringBuffer();
