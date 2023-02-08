@@ -22,10 +22,7 @@ public class Solution {
     static int[] A = new int[11];
 
     static void GetAnc() {
-        PriorityQueue<Node> pq = new PriorityQueue<>((o1, o2) -> {
-            if (o1.cnt < o2.cnt) return -1;
-            return 1;
-        });
+        PriorityQueue<Node> pq = new PriorityQueue<>((o1, o2) -> o1.cnt - o2.cnt);
 
         pq.add(new Node(0, K));
         while (pq.peek().left != 0) {
