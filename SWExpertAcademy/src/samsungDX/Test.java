@@ -1,5 +1,6 @@
 package samsungDX;
 
+<<<<<<< HEAD
 class Node {
     int data;
     Node next;
@@ -69,5 +70,19 @@ class SinglyList {
 public class Test {
     public static void main(String[] args) {
 
+=======
+import java.util.PriorityQueue;
+import java.util.Set;
+
+public class Test {
+    public static void main(String[] args) {
+        char[] name = "aa ".toCharArray();
+        name[2] = 0;
+        int a = 0;
+        for (int i = 0; name[i] != 0; i++) {
+            a = a << 5 | (name[i] ^ 96);
+        }
+        System.out.println(a);
+>>>>>>> 3362433cf1c3b7aade13f7883d1ae078545e4e62
     }
 }
