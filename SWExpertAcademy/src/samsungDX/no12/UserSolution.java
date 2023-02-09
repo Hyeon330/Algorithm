@@ -18,6 +18,7 @@ class Node {
 class UserSolution {
     Node root;
 
+    // char[] name을 각 글자당 5bit씩 이어 붙어서 정수형태로 바꿔주는 함수
     int traceName(char[] name) {
         return traceName(name, 0, name.length - 1);
     }
@@ -29,6 +30,7 @@ class UserSolution {
         return ret;
     }
 
+    // 경로의 최하위 디렉토리 노드를 반환하는 함수
     Node getDir(char[] path) {
         Node p = root;
         int pathName, s = 1;
@@ -48,6 +50,7 @@ class UserSolution {
         return p;
     }
 
+    // 디렉토리가 생성되거나 삭제되면 상위 조상노드들의 count를 업데이트 해주는 함수
     void updateCnt(Node n, int cnt) {
         while (n != null) {
             n.count += cnt;
@@ -124,14 +127,14 @@ class UserSolution {
 디렉토리 생성
 - 생성할 디렉토리를 1번 함수를 사용해서 찾아감
 - 그 디렉토리에 새로운 이름을 하나 추가하고 포인터를 추가해서 연결
-- 만들어진 노드의 부모와 그 부모들 전부 count를 업데이트 시킴(2번 함수)
+- 만들어진 노드의 부모와 그 부모들 전부 count를 업데이트 시킴(3번 함수)
 
 디렉토리 제거
 - 생성할 디렉토리를 1번 함수를 사용해서 찾아감
 - 부모노드에서 링크 제거
 - 모든 조상 노드에서 count update
 
-서브트리 복사
+디렉토리 복사
 - 소스와 타겟이 있기 때문에 1번 함수를 두번 해야 함
 - 트래버스 알고리즘 사용하여 모든 노드 하나씩 복사
 - target쪽 조상들 count update
