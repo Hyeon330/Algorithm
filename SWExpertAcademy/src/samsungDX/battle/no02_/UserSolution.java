@@ -156,13 +156,41 @@ public class UserSolution {
         n2.alliance.add(n1);
         return 1;
     }
+    int adjacentPoint(Node n1, Node n2) {
+        MyList queue = new MyList();
+        int point = 0;
+        boolean[][] nodeFlag = new boolean[N][N];
+
+        queue.add(n1);
+        while (queue.size != 0) {
+            Node n = queue.poll();
+            MyList.LstNode lstN = n.alliance.lst.head;
+            nodeFlag[n.r][n.c] = true;
+            int tmpR, tmpC;
+
+            for (int i = 0; i < 8; i++) {
+                tmpR = n2.r + ud[i];
+                tmpC = n2.c + lr[i];
+                if (tmpR == n.r && tmpC == n.c) {
+                    point += n.soldier << 1;
+                    n.soldier -= n.soldier << 1;
+                    break;
+                }
+            }
+            while (lstN != null) {
+                if (!nodeFlag[lstN.data.r][lstN.data.c])
+                    queue.add(lstN.data);
+                lstN = lstN.next;
+            }
+        }
+        return point;
+    }
     int attack(char mMonarchA[], char mMonarchB[], char mGeneral[])
     {
-        MyList queue = new MyList();
         Node n1 = null, n2 = null;
-        int attP, chk;
+        int attP, dffP, chk;
 
-        attP = chk = 0;
+        chk = 0;
         for (int i = 0; i < N && chk < 2; i++) {
             for (int j = 0; j < N && chk < 2; j++) {
                 if (MyHash.strcmp(map[i][j].monarch, mMonarchA) == 0) {
@@ -179,27 +207,20 @@ public class UserSolution {
                 }
             }
         }
-        queue.add(n1);
-        while (queue.size != 0) {
-            Node n = queue.poll();
-            int tmpR, tmpC;
-            for (int i = 0; i < 8; i++) {
-                tmpR = n2.r + ud[i];
-                tmpC = n2.c + lr[i];
-                if (tmpR == n.r && tmpC == n.c) {
-                    attP += n.soldier << 1;
-                    n.soldier -= n.soldier << 1;
-                }
-            }
-            while (n.alliance.lst.head != null) {
 
-            }
+        attP = adjacentPoint(n1, n2);
+        dffP = n2.soldier + adjacentPoint(n2, n2);
+        int warResult = dffP - attP;
+        if (warResult >= 0)
+            return 0;
+        else {
+            n2.soldier = warResult * -1;
+            n2.monarch = mGeneral;
+            return 1;
         }
-        return -3;
     }
     int recruit(char mMonarch[], int mNum, int mOption)
     {
-
         return -1;
     }
 }

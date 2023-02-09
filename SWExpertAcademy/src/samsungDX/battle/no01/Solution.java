@@ -83,7 +83,8 @@ class Solution
     {
         int TC, MARK;
 
-        System.setIn(new java.io.FileInputStream("C:\\Users\\dldls\\Desktop\\Study/sample_25_input.txt"));
+//        System.setIn(new java.io.FileInputStream("C:\\Users\\dldls\\Desktop\\Study/sample_25_input.txt"));
+        System.setIn(new java.io.FileInputStream("D:\\study\\알고리즘 코딩테스트 문제/sample_25_input.txt"));
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
