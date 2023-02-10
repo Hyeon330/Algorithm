@@ -26,15 +26,15 @@ public class MaxHeap {
     }
     // 최대값 리턴
     public int top() {
-        assert size != 0;
+        if (size == 0)
+            return -1;
         return data[1];
     }
     // 최대값 삭제
     public int pop() {
-        int result;
+        int result = top();
 
-        assert size != 0;
-        result = data[1];
+        if (result < 0) return result;
         data[1] = data[size--];
         for (int i = 1; left(i) <= size;) {
             if (left(i) == size || data[left(i)] > data[right(i)]) {

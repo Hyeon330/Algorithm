@@ -1,22 +1,16 @@
 package samsungDX;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.StringTokenizer;
+import java.util.Comparator;
+import java.util.PriorityQueue;
 
 public class Test {
     public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringBuffer sb = new StringBuffer();
-        StringTokenizer st;
-        int T;
-
-        T = Integer.parseInt(br.readLine());
-        for (int tc = 1; tc <= T; tc++) {
-
-            sb.append("#" + tc + " " + "\n");
-        }
-        System.out.print(sb);
+        PriorityQueue<Integer> a = new PriorityQueue<>(new Comparator<Integer>() {
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return 0;
+            }
+        })
     }
 }
