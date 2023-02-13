@@ -1,4 +1,4 @@
-package samsungDX.pro.no03;
+package samsungDX.pro.no03_;
 
 class Manager {
     int startT, arrivT, dstLoc;

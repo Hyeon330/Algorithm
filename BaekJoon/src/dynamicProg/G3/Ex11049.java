@@ -20,7 +20,7 @@ public class Ex11049 {
         for (int i = 1; i < N; i++) {
             for (int j = 0; j < N - i; j++) {
                 e = j + i;
-                dp[j][e] = (1 << 31) - 1;
+                dp[j][e] = Integer.MAX_VALUE;
                 for (int k = j; k < e; k++) {
                     int tmp = dp[j][k] + dp[k + 1][e] + arr[0][j] * arr[1][k] * arr[1][e];
                     if (dp[j][e] > tmp)
