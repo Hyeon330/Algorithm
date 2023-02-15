@@ -1,4 +1,4 @@
-package samsungDX.pro.no05;
+package samsungDX.pro.no05_;
 
 class UserSolution
 {
