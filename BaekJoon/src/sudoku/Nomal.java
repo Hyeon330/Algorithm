@@ -58,8 +58,8 @@ public class Nomal {
                     board[y][x] = i;
                     if (func(y, x + 1))
                         return true;
+                    board[y][x] = 0;
                 }
-                board[y][x] = 0;
             }
         }
         return false;
